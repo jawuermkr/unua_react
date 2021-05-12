@@ -17,13 +17,16 @@ const handInputChange = (event) => {
 
 const enviarDatos = (event) => {
     event.preventDefault();
-    console.log(datos.nombre +  ' ' + datos.clave)
+    console.log(datos.nombre + ' ' + datos.clave)
 }
 
     return (
         <Fragment>
             <h1>Login Unua</h1>
             <form className="row" onSubmit={enviarDatos}>
+                <div className="col-md-4">
+                    
+                </div>
                 <div className="col-md-4">
                     <input
                         name="nombre"
@@ -32,8 +35,6 @@ const enviarDatos = (event) => {
                         type="text"
                         onChange={handInputChange}
                     />
-                </div>
-                <div className="col-md-4">
                     <input
                         name="clave"
                         className="form-control"
@@ -41,12 +42,15 @@ const enviarDatos = (event) => {
                         type="password"
                         onChange={handInputChange}
                     />
+                    <input
+                        className="btn btn-success form-control"
+                        type="submit"
+                    />
                 </div>
                 <div className="col-md-4">
-                    <input className="btn btn-success form-control" type="submit" />
+                    
                 </div>
             </form>
-            <h3>{datos.nombre} - {datos.clave}</ h3>
         </Fragment>
         
     );
